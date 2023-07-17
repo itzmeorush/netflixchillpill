@@ -1,0 +1,125 @@
+.banner {
+  height: 700px;
+  background-color: black;
+//   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  h1 {
+    color: white;
+    font-size: 3rem;
+    z-index: 10;
+    width: 50%;
+    align-self: flex-start;
+    margin-bottom: 2rem;
+  }
+  p {
+    color: white;
+    z-index: 10;
+    width: 70%;
+    align-self: flex-start;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    word-spacing: 2px;
+  }
+  div {
+    z-index: 10;
+    display: flex;
+    align-self: flex-start;
+    margin-top: 1rem;
+    :nth-child(even) {
+      background-color: red;
+      border: none;
+      width: 300px;
+      margin-left: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3rem;
+      box-sizing: border-box;
+
+      border: 1px solid red;
+
+      &:hover {
+        background: transparent;
+        border: 1px solid red;
+      }
+    }
+    :nth-child(1) {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      height: 3rem;
+
+      &:hover {
+        background-color: red;
+        border: 1px solid red;
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    justify-content: center;
+    z-index: 10;
+    margin-left: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    align-self: flex-start;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+
+    svg {
+      font-size: 1.5rem;
+      margin-left: 10px;
+      text-align: center;
+    }
+  }
+}
+.row {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+
+  > h2 {
+    font-weight: 300;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+  }
+
+  > div {
+    display: flex;
+    overflow-x: auto;
+  }
+}
+
+.card {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  margin: 0.3rem;
+  padding-bottom: 2rem;
+  &:hover {
+    transform: translateY(-10px) scale(1.03);
+  }
+}
